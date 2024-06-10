@@ -19,7 +19,10 @@ public class HobbiesController {
     @GetMapping(path = "/name/{name}")
     public Optional<Hobbies> getHobbiesByName(String name){return hobbiesService.getHobbiesByName(name);}
     @GetMapping(path = "/users/{users}")
-    public List<Hobbies> getHobbiesByUserId(Long usersId){return hobbiesService.getHobbiesByUserId(usersId);}
+    public List<Hobbies> getHobbiesByUser(Users users){return hobbiesService.getHobbiesByUser(users);}
+
+//    @GetMapping(path = "/users/{usersId}")
+//    public List<Hobbies> getHobbiesByUser(Long usersId){return hobbiesService.getHobbiesByUserId(usersId);}
     @PostMapping
     public void registerHobby(@RequestBody Hobbies hobbies){hobbiesService.addHobby(hobbies);}
     @PutMapping

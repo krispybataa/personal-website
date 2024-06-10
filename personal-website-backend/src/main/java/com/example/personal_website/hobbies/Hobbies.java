@@ -42,6 +42,13 @@ public class Hobbies {
         this.media = media;
         this.users = users;
     }
+
+    public Hobbies(String name, String description, Users users) {
+        this.name = name;
+        this.description = description;
+        this.users = users;
+    }
+
     @Override
     public String toString() {
         return "Hobbies{" +

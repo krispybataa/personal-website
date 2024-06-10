@@ -33,7 +33,7 @@ public class MusicService {
     //Search by User
     public List<Music> getMusicByUser(Users users){return musicRepository.findMusicByUsers(users);}
     //Search by User ID
-    public List<Music> getMusicByUserId(Long usersId) {return musicRepository.findMusicByUsersId(usersId);}
+//    public List<Music> getMusicByUserId(Long usersId) {return musicRepository.findMusicByUsersId(usersId);}
 
     //Method to add tracks
     public void addMusic(Music music) {

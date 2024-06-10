@@ -20,6 +20,6 @@ public interface TodosRepository extends JpaRepository<Todos, Long> {
     //Find User
     List<Todos> findTodosByUsers(Users users);
     //Find by user ID
-    List<Todos> findTodosByUsersId(Long usersId);
+//    List<Todos> findTodosByUsersId(Long usersId);
 
 }

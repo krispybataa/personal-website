@@ -17,5 +17,5 @@ public interface MusicRepository extends JpaRepository<Music, Long> {
     @Query("SELECT m FROM Music m WHERE m.artist LIKE CONCAT('%', :artist, '%')")
     Optional<Music> findMusicByArtist(String artist);
     List<Music> findMusicByUsers(Users users);
-    List<Music> findMusicByUsersId(Long usersId);
+//    List<Music> findMusicByUsersId(Long usersId);
 }

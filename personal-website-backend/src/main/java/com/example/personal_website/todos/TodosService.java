@@ -63,6 +63,5 @@ public class TodosService {
 
     public List<Todos> getTodosByUser(Users users) {return todosRepository.findTodosByUsers(users);}
 
-    public List<Todos> getTodosByUserId(Long usersId) {return todosRepository.findTodosByUsersId(usersId);}
-
+//    public List<Todos> getTodosByUserId(Long usersId) {return todosRepository.findTodosByUsersId(usersId);}
 }

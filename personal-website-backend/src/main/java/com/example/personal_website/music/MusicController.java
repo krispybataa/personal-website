@@ -1,6 +1,7 @@
 package com.example.personal_website.music;
 
 import com.example.personal_website.users.Users;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,8 +29,10 @@ public class MusicController {
     }
     @GetMapping(path = "/artist/{artist}")
     public Optional<Music> getMusicByArtist(@PathVariable String artist){return musicService.getMusicByArtist(artist);}
-    @GetMapping(path = "/users/{usersId}")
-    public List<Music> getMusicByUserId(@PathVariable Long usersId){return musicService.getMusicByUserId(usersId);}
+//    @GetMapping(path = "/users/{usersId}")
+//    public List<Music> getMusicByUserId(@PathVariable Long usersId){return musicService.getMusicByUserId(usersId);}
+    @GetMapping(path = "/users/{users}")
+    public List<Music> getMusicByUser(@PathVariable Users users){return musicService.getMusicByUser(users);}
     @PostMapping
     public void registerMusic(@RequestBody Music music){
         musicService.addMusic(music);

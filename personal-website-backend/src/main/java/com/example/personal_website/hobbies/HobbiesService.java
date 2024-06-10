@@ -20,7 +20,7 @@ public class HobbiesService {
     }
     public Optional<Hobbies> getHobbiesByName(String name) {return hobbiesRepository.findHobbiesByName(name);}
     public List<Hobbies> getHobbiesByUser(Users users) {return hobbiesRepository.findHobbiesByUsers(users);}
-    public List<Hobbies> getHobbiesByUserId(Long usersId) {return hobbiesRepository.findHobbiesByUserId(usersId);}
+//    public List<Hobbies> getHobbiesByUserId(Long usersId) {return hobbiesRepository.findHobbiesByUserId(usersId);}
 
     public void addHobby(Hobbies hobbies) {
         Optional<Hobbies> hobbiesOptional = hobbiesRepository.findHobbiesByName(hobbies.getName());

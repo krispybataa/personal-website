@@ -16,5 +16,5 @@ public interface HobbiesRepository extends JpaRepository<Hobbies, Long> {
     //Search by user
     List<Hobbies> findHobbiesByUsers(Users user);
     //Search by User id
-    List<Hobbies> findHobbiesByUserId(Long usersId);
+//    List<Hobbies> findHobbiesByUserId(Long usersId);
 }

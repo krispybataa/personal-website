@@ -21,8 +21,10 @@ public class TodosController {
     }
     @GetMapping(path = "/category/{category}")
     public Optional<Todos> getTodosByCategory(@RequestBody String category){return todosService.getTodosByCategory(category);}
-    @GetMapping(path = "/users/{usersId}")
-    public List<Todos> getTodosByUserId(@PathVariable Long usersId){return todosService.getTodosByUserId(usersId);}
+//    @GetMapping(path = "/users/{usersId}")
+//    public List<Todos> getTodosByUserId(@PathVariable Long usersId){return todosService.getTodosByUserId(usersId);}
+    @GetMapping(path = "/users/{users}")
+    public List<Todos> getTodosByUser(@PathVariable Users users){return todosService.getTodosByUser(users);}
     @PostMapping
     public void registerTodos(@RequestBody Todos todos){todosService.addNewTodos(todos);}
     @PutMapping
