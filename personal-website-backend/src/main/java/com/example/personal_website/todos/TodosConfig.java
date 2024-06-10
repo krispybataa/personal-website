@@ -2,15 +2,19 @@ package com.example.personal_website.todos;
 
 import com.example.personal_website.users.Users;
 import com.example.personal_website.users.UsersRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 
 import java.util.List;
 
 @Configuration
 public class TodosConfig {
     @Bean
+    @Order(2)
+    @Transactional
     CommandLineRunner todoscommandLineRunner(TodosRepository todosRepository, UsersRepository usersRepository){
         return args -> {
             Users clark = usersRepository.findUsersByUsername("krispybataa").orElseThrow(() -> new IllegalStateException("User not found"));

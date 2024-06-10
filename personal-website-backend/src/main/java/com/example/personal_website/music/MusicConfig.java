@@ -2,15 +2,19 @@ package com.example.personal_website.music;
 
 import com.example.personal_website.users.Users;
 import com.example.personal_website.users.UsersRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 
 import java.util.List;
 
 @Configuration
 public class MusicConfig {
     @Bean
+    @Order(3)
+    @Transactional
     CommandLineRunner musiccommandLineRunner(MusicRepository musicRepository, UsersRepository usersRepository){
         return args -> {
             Users clark = usersRepository.findUsersByUsername("krispybataa").orElseThrow(() -> new IllegalStateException("User not found"));

@@ -3,6 +3,7 @@ package com.example.personal_website.users;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @Configuration
 public class UsersConfig {
     @Bean
+    @Order(1)
     CommandLineRunner userscommandLineRunner(UsersRepository usersRepository){
         return args -> {
             Users clark = new Users(
