@@ -3,6 +3,7 @@ package com.example.personal_website.users;
 import com.example.personal_website.hobbies.Hobbies;
 import com.example.personal_website.music.Music;
 import com.example.personal_website.todos.Todos;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -41,11 +42,14 @@ public class Users {
     private LocalDateTime updatedAt;
     //Relationship mapping with Todos table
     @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Todos> todos;
     //Relationship mapping with Music
     @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Music> music;
     @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Hobbies> hobbies;
 
 

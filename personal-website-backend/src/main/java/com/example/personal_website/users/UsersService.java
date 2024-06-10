@@ -24,6 +24,11 @@ public class UsersService {
         return usersRepository.findAll();
     }
 
+    public Users getUserById(Long userId) {
+        return usersRepository.findById(userId)
+                .orElseThrow(() -> new IllegalStateException("User ID: " + userId + " does not exist."));
+    }
+
     public void addNewUsers(Users users) {
         Optional<Users> usersOptional = usersRepository.findUsersByUsername(users.getUsername());
 

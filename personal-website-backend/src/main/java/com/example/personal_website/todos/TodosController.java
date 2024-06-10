@@ -27,6 +27,10 @@ public class TodosController {
     public List<Todos> getTodosByUser(@PathVariable Users users){return todosService.getTodosByUser(users);}
     @PostMapping
     public void registerTodos(@RequestBody Todos todos){todosService.addNewTodos(todos);}
+    @PutMapping(path = "/{todosId}/complete")
+    public void markTodoAsCompleted(@PathVariable Long todosId, @RequestParam boolean completed) {
+        todosService.markTodoAsCompleted(todosId, completed);
+    }
     @PutMapping
     public void updateTodos(
             @PathVariable("todosId") Long todosId,

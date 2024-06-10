@@ -20,13 +20,13 @@ public class TodosConfig {
             Users clark = usersRepository.findUsersByUsername("krispybataa").orElseThrow(() -> new IllegalStateException("User not found"));
             Users shan = usersRepository.findUsersByUsername("deenonuggets").orElseThrow(() -> new IllegalStateException("User not found"));
             Todos task_clark = new Todos(
-                    "academics",
+                    "#academics",
                     "finish spring",
                     "self explanatory",
                     clark
             );
             Todos task_shan = new Todos(
-                    "academics",
+                    "#academics",
                     "finish react",
                     "self explanatory",
                     shan

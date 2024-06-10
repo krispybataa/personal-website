@@ -48,7 +48,8 @@ public class MusicService {
                             String title,
                             String album,
                             String artist,
-                            String aaUrl)
+                            String aaUrl,
+                            String spUrl)
     {
         Music music = musicRepository.findById(musicId).orElseThrow(()
                 -> new IllegalStateException("Track ID: " + musicId + " does not exist."));
@@ -75,6 +76,10 @@ public class MusicService {
         //Update recorded album URL
         if (aaUrl != null && !aaUrl.isEmpty()) {
             music.setAaUrl(aaUrl);
+        }
+
+        if (spUrl != null && !spUrl.isEmpty()) {
+            music.setAaUrl(spUrl);
         }
         musicRepository.save(music);
     }

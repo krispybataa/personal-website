@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Navbar from "./Navbar";
+import Clark from './components/users/Clark';
+import Sheianne from './components/users/Sheianne';
+import Todos from './components/pages/Todos';
+import Music from './components/pages/Music';
+import Hobbies from './components/pages/Hobbies';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    const [currentUser, setCurrentUser] = useState('clark');
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Clark and Sheianne</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    return (
+        <Router>
+            <Navbar user={currentUser} />
+            <Routes>
+                <Route path="/" element={<Home setuser={setCurrentUser} />} />
+                <Route path="/clark" element={<Clark />} />
+                <Route path="/sheianne" element={<Sheianne />} />
+                <Route path="/clark/todos" element={<Todos userId={1} />} />
+                <Route path="/clark/music" element={<Music userId={1} />} />
+                <Route path="/clark/hobbies" element={<Hobbies userId={1} />} />
+                <Route path="/sheianne/todos" element={<Todos userId={2} />} />
+                <Route path="/sheianne/music" element={<Music userId={2} />} />
+                <Route path="/sheianne/hobbies" element={<Hobbies userId={2} />} />
+            </Routes>
+        </Router>
+    );
+};
+export default App;

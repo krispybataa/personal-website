@@ -63,5 +63,12 @@ public class TodosService {
 
     public List<Todos> getTodosByUser(Users users) {return todosRepository.findTodosByUsers(users);}
 
+    public void markTodoAsCompleted(Long todosId, boolean completed) {
+        Todos todos = todosRepository.findById(todosId).orElseThrow(() ->
+                new IllegalStateException("Task ID: " + todosId + " does not exist."));
+        todos.setCompleted(completed);
+        todosRepository.save(todos);
+    }
+
 //    public List<Todos> getTodosByUserId(Long usersId) {return todosRepository.findTodosByUsersId(usersId);}
 }

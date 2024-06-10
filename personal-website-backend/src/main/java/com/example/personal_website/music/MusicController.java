@@ -3,6 +3,7 @@ package com.example.personal_website.music;
 import com.example.personal_website.users.Users;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,14 +38,16 @@ public class MusicController {
     public void registerMusic(@RequestBody Music music){
         musicService.addMusic(music);
     }
-    @PutMapping
-    public void updateMusic(
+    @PutMapping(path = {"/{musicId}"})
+    public ResponseEntity<?> updateMusic(
             @PathVariable("musicId") Long musicId,
             @RequestParam(required = false) String title,
             @RequestParam(required = false) String album,
             @RequestParam(required = false) String artist,
-            @RequestParam(required = false) String aaUrl){
-        musicService.updateMusic(musicId, title, album, artist, aaUrl);
+            @RequestParam(required = false) String aaUrl,
+            @RequestParam(required = false) String spUrl){
+        musicService.updateMusic(musicId, title, album, artist, aaUrl, spUrl);
+        return ResponseEntity.ok().build();
     }
     @DeleteMapping(path = "{musicId}")
     public void deleteMusic(@PathVariable("musicId") Long musicId){musicService.deleteMusic(musicId);}

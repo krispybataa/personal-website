@@ -20,18 +20,28 @@ public class HobbiesConfig {
             Users clark = usersRepository.findUsersByUsername("krispybataa").orElseThrow(() -> new IllegalStateException("User not found"));
             Users shan = usersRepository.findUsersByUsername("deenonuggets").orElseThrow(() -> new IllegalStateException("User not found"));
 
-            Hobbies crochet = new Hobbies(
-                    "Crocheting",
-                    "Fun knitting knots",
-                    shan
-            );
-
             Hobbies farming = new Hobbies(
                     "Farming Levels",
                     "Levelling up Subclasses",
+                    "https://youtu.be/YwILuJ5lVwM",
                     clark
             );
-            hobbiesRepository.saveAll(List.of(crochet, farming));
+
+            Hobbies givingup = new Hobbies(
+                    "Not Giving you Up",
+                    "Not letting you go",
+                    "https://youtu.be/dQw4w9WgXcQ",
+                    clark
+            );
+
+            Hobbies crochet = new Hobbies(
+                    "Crocheting",
+                    "Fun knitting knots",
+                    "https://youtu.be/aAxGTnVNJiE",
+                    shan
+            );
+
+            hobbiesRepository.saveAll(List.of(farming, givingup, farming));
         };
     }
 }

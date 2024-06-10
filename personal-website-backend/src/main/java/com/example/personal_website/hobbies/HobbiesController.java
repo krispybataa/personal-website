@@ -1,7 +1,9 @@
 package com.example.personal_website.hobbies;
 
 import com.example.personal_website.users.Users;
+import com.google.gson.JsonObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,17 +26,24 @@ public class HobbiesController {
 //    @GetMapping(path = "/users/{usersId}")
 //    public List<Hobbies> getHobbiesByUser(Long usersId){return hobbiesService.getHobbiesByUserId(usersId);}
     @PostMapping
-    public void registerHobby(@RequestBody Hobbies hobbies){hobbiesService.addHobby(hobbies);}
-    @PutMapping
-    public void updateHobby(
+    public ResponseEntity<?> registerHobby(@RequestBody Hobbies hobbies){
+        hobbiesService.addHobby(hobbies);
+        return ResponseEntity.ok().body(new JsonObject());
+    }
+    @PutMapping(path = "/{hobbiesId}")
+    public ResponseEntity<?> updateHobby(
             @PathVariable("hobbiesId") Long hobbiesId,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String description,
-            @RequestParam(required = false) List<String> media
+            @RequestParam(required = false) String media
     )
     {
         hobbiesService.updateHobbies(hobbiesId, name, description, media);
+        return ResponseEntity.ok().build();
     }
     @DeleteMapping(path = "{hobbiesId}")
-    public void deleteHobby(@PathVariable("hobbiesId") Long hobbiesId){hobbiesService.deleteHobbies(hobbiesId);}
+    public ResponseEntity<?> deleteHobby(@PathVariable("hobbiesId") Long hobbiesId){
+        hobbiesService.deleteHobbies(hobbiesId);
+        return ResponseEntity.ok().build();
+    }
 }

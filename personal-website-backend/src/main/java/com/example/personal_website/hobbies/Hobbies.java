@@ -1,6 +1,7 @@
 package com.example.personal_website.hobbies;
 
 import com.example.personal_website.users.Users;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,23 +30,17 @@ public class Hobbies {
     private long id;
     private String name;
     private String description;
-    @ElementCollection
-    private List<String> media;
+    private String media;
     @ManyToOne
     @JoinColumn(name = "usersId", nullable = false)
+    @JsonBackReference
     private Users users;
 
     //Database Constructor
-    public Hobbies(String name, String description, List<String> media, Users users) {
+    public Hobbies(String name, String description, String media, Users users) {
         this.name = name;
         this.description = description;
         this.media = media;
-        this.users = users;
-    }
-
-    public Hobbies(String name, String description, Users users) {
-        this.name = name;
-        this.description = description;
         this.users = users;
     }
 

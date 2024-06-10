@@ -33,7 +33,7 @@ public class HobbiesService {
     public void updateHobbies(Long hobbiesId,
                               String name,
                               String description,
-                              List<String> media) {
+                              String media) {
         Hobbies hobbies = hobbiesRepository.findById(hobbiesId).orElseThrow(()
                 -> new IllegalStateException("Hobby ID: " + hobbiesId + " already exists."));
 

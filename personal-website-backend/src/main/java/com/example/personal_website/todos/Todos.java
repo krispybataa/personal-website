@@ -1,6 +1,7 @@
 package com.example.personal_website.todos;
 
 import com.example.personal_website.users.Users;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,10 +33,12 @@ public class Todos {
     private String description;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private boolean completed;
     //Relationship mapping with Users column
     //Determines who can see which Todos
     @ManyToOne
     @JoinColumn(name = "usersId", nullable = false)
+    @JsonBackReference
     private Users users;
 
     //Database Constructor
@@ -65,6 +68,7 @@ public class Todos {
                 ", description='" + description + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
+                ", completed=" + completed +
                 ", users=" + users +
                 '}';
     }

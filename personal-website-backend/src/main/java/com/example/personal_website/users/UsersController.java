@@ -1,6 +1,7 @@
 package com.example.personal_website.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -18,6 +19,11 @@ public class UsersController {
     @GetMapping
     public List<Users> getUsers(){
         return usersService.getUsers();
+    }
+    @GetMapping(path = "/{userId}")
+    public Users getUserById(@PathVariable Long userId) {
+        Users user = usersService.getUserById(userId);
+        return ResponseEntity.ok(user).getBody();
     }
     @PostMapping
     public void registerUser(@RequestBody Users users){
