@@ -52,15 +52,15 @@ public class MusicConfig {
                     "https://open.spotify.com/track/3spdoTYpuCpmq19tuD0bOe?si=aec955daf8e541e5",
                     clark
             );
-            Music nlu = new Music(
-                    "Not Like Us",
-                    "Not Like Us",
-                    "Kendrick Lamar",
-                    "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
-                    "https://open.spotify.com/track/6AI3ezQ4o3HUoP6Dhudph3?si=a35e5a0e1ed04777",
+            Music mirror = new Music(
+                    "MIRROR",
+                    "MIRROR",
+                    "Ado",
+                    "https://i.scdn.co/image/ab67616d00001e02dfdacb364c44d7365b6139b7",
+                    "https://open.spotify.com/track/0NtfH5RUt4V3Vzh18Wuc23?si=689e08d46d9140e5",
                     clark
             );
-            musicRepository.saveAll(List.of(bibbidiba,nlu, myway, chuchu, pinkvenom));
+            musicRepository.saveAll(List.of(bibbidiba,mirror, myway, chuchu, pinkvenom));
 
             //SHAN MUSIC CONFIG
             Music magnetic = new Music(
@@ -71,8 +71,6 @@ public class MusicConfig {
                     "https://open.spotify.com/track/1aKvZDoLGkNMxoRYgkckZG?si=c9109785a4ab4e12",
                     shan
             );
-
-
             musicRepository.saveAll(List.of(magnetic));
         };
     }

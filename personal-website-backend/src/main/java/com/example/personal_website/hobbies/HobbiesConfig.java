@@ -41,7 +41,7 @@ public class HobbiesConfig {
                     shan
             );
 
-            hobbiesRepository.saveAll(List.of(farming, givingup, farming));
+            hobbiesRepository.saveAll(List.of(farming, givingup, crochet));
         };
     }
 }
