@@ -1,9 +1,9 @@
 <div align="center" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-    <a href="https://laravel.com" target="_blank">
-        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    <a href="https://github.com/krispybataa/personal-website/blob/ee790d44bceef7fbdf369889731fa069bb7dc75f/personal-website-frontend/src/assets/reactvite.png" target="_blank">
+        <img src="https://github.com/krispybataa/personal-website/blob/ee790d44bceef7fbdf369889731fa069bb7dc75f/personal-website-frontend/src/assets/reactvite.png?raw=true" width="400" alt="React Vite Logo">
     </a>
-    <a href="https://github.com/krispybataa/machine-problem" target="_blank">
-        <img src="https://raw.githubusercontent.com/krispybataa/machine-problem/74d431bfc41abc8297e0d1910f4c27cb735267d2/resources/images/logo.png" width="400" alt="Logo">
+    <a href="https://github.com/krispybataa/personal-website/blob/c7736198c186b4bfd2068405abfc30926c8daf15/personal-website-frontend/src/assets/LOGO.png" target="_blank">
+        <img src="https://github.com/krispybataa/personal-website/blob/c7736198c186b4bfd2068405abfc30926c8daf15/personal-website-frontend/src/assets/LOGO.png?raw=true" width="400" alt="Logo">
     </a>
 </div>
 
