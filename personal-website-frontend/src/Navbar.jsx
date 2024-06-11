@@ -20,29 +20,27 @@ const Navbar = ({ user }) => {
                         <img src={logo} alt="Logo" className="logo"/> {/* Adjust the size as needed */}
                     </a>
                     <div className="flex space-x-4">
-                        <a href="/about-sheianne">SHEIANNE</a>
+                        <a href="/sheianne">SHEIANNE</a>
                         <span className="separator"><b>|</b></span>
-                        <a href="/about-clark">CLARK</a>
-                        <span className="separator"><b>|</b></span>
-                        <a href="/todos">TO-DO</a>
+                        <a href="/clark">CLARK</a>
                     </div>
                 </div>
-                {showLinks && (
-                    <div className="flex space-x-4">
-                        <Link to={`/${user}/todos`} className="hover:text-gray-400">
-                            To-Do List
-                        </Link>
-                        <Link to={`/${user}/music`} className="hover:text-gray-400">
-                            Favorite Music
-                        </Link>
-                        <Link to={`/${user}/hobbies`} className="hover:text-gray-400">
-                        Hobbies
-                        </Link>
-                        <Link to="/" className="hover:text-gray-400">
-                            Switch Character
-                        </Link>
-                    </div>
-                )}
+                {/*{showLinks && (*/}
+                {/*    <div className="flex space-x-4">*/}
+                {/*        <Link to={`/${user}/todos`} className="hover:text-gray-400">*/}
+                {/*            To-Do List*/}
+                {/*        </Link>*/}
+                {/*        <Link to={`/${user}/music`} className="hover:text-gray-400">*/}
+                {/*            Favorite Music*/}
+                {/*        </Link>*/}
+                {/*        <Link to={`/${user}/hobbies`} className="hover:text-gray-400">*/}
+                {/*        Hobbies*/}
+                {/*        </Link>*/}
+                {/*        <Link to="/" className="hover:text-gray-400">*/}
+                {/*            Switch Character*/}
+                {/*        </Link>*/}
+                {/*    </div>*/}
+                {/*)}*/}
             </div>
         </nav>
     );

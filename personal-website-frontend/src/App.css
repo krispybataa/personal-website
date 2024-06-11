@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   /*padding: 2rem;*/
   /*text-align: center;*/
 }
@@ -173,3 +172,54 @@
   object-fit: cover;
   cursor: pointer;
 }
+
+/* rounded corners of pictures */
+.mb-4 {
+  border-radius: 10%;
+}
+
+/* container for a user's page */
+.gen-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center the container content horizontally */
+  align-items: center; /* Center the container content vertically */
+  gap: 300px;
+  max-height: 100vh;
+  margin-top: 1rem;
+}
+
+/* pfp per user */
+.shan-pfp, .clark-pfp {
+  width: 300px;
+}
+
+/* buttons on a user's page */
+.pages {
+  margin: 30px 0;
+}
+
+/* favorite music button on a user's page*/
+.music-page {
+  margin-top: 50px;
+}
+
+/* Explore users title */
+.explore {
+  font-size: 30px;
+  font-family: poppins;
+}
+
+/*Used for dynamic gaps*/
+/*@media (max-width: 1200px) {*/
+/*  .gen-container {*/
+/*    --dynamic-gap: 2rem;*/
+/*  }*/
+/*}*/
+
+/*.p-4 {*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
