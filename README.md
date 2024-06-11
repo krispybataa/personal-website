@@ -1,6 +1,6 @@
 <div align="center" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-    <a href="https://github.com/krispybataa/personal-website/blob/ee790d44bceef7fbdf369889731fa069bb7dc75f/personal-website-frontend/src/assets/reactvite.png" target="_blank">
-        <img src="https://github.com/krispybataa/personal-website/blob/ee790d44bceef7fbdf369889731fa069bb7dc75f/personal-website-frontend/src/assets/reactvite.png?raw=true" width="400" alt="React Vite Logo">
+    <a href="https://github.com/krispybataa/personal-website/blob/c7feaa1f61180cdb0908c52ff675315060cd6708/personal-website-frontend/src/assets/reactvite.png" target="_blank">
+        <img src="https://github.com/krispybataa/personal-website/blob/c7feaa1f61180cdb0908c52ff675315060cd6708/personal-website-frontend/src/assets/reactvite.png?raw=true" width="400" alt="React Vite Logo">
     </a>
     <a href="https://github.com/krispybataa/personal-website/blob/c7736198c186b4bfd2068405abfc30926c8daf15/personal-website-frontend/src/assets/LOGO.png" target="_blank">
         <img src="https://github.com/krispybataa/personal-website/blob/c7736198c186b4bfd2068405abfc30926c8daf15/personal-website-frontend/src/assets/LOGO.png?raw=true" width="400" alt="Logo">
@@ -64,8 +64,8 @@ The website was designed to be simple, to the point, and most of all updatable s
 
 ## Entity Relationship Diagram
 <p align="LEFT">
-    <a href="https://github.com/krispybataa/personal-website/blob/3f26c8e3847f6676d9db51cb6446b616601d232b/personal-website-frontend/src/assets/personalwebsite@localhost.drawio.png" target="_blank">
-        <img src="https://github.com/krispybataa/personal-website/blob/3f26c8e3847f6676d9db51cb6446b616601d232b/personal-website-frontend/src/assets/personalwebsite@localhost.drawio.png?raw=true" width="400" alt="Personal Website Drawio">
+    <a href="https://github.com/krispybataa/personal-website/blob/c7feaa1f61180cdb0908c52ff675315060cd6708/personal-website-frontend/src/assets/personalwebsite@localhost.drawio.png" target="_blank">
+        <img src="https://github.com/krispybataa/personal-website/blob/c7feaa1f61180cdb0908c52ff675315060cd6708/personal-website-frontend/src/assets/personalwebsite@localhost.drawio.png?raw=true" width="400" alt="Personal Website Drawio">
     </a>
 </p>
 
