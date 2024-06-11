@@ -64,10 +64,11 @@ The website was designed to be simple, to the point, and most of all updatable s
 
 ## Entity Relationship Diagram
 <p align="LEFT">
-    <a href="https://github.com/krispybataa/machine-problem" target="_blank">
-        <img src="https://raw.githubusercontent.com/krispybataa/machine-problem/a45d6e68eeff9c0c63622c280f61a6997ee080d1/resources/images/erd.png" width="400" alt="ERD">
+    <a href="https://github.com/krispybataa/personal-website/blob/3f26c8e3847f6676d9db51cb6446b616601d232b/personal-website-frontend/src/assets/personalwebsite@localhost.drawio.png" target="_blank">
+        <img src="https://github.com/krispybataa/personal-website/blob/3f26c8e3847f6676d9db51cb6446b616601d232b/personal-website-frontend/src/assets/personalwebsite@localhost.drawio.png?raw=true" width="400" alt="Personal Website Drawio">
     </a>
 </p>
+
 
 
 ## Contact Us
