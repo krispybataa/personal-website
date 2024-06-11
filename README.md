@@ -23,12 +23,8 @@ The website was designed to be simple, to the point, and most of all updatable s
     2. Updatable music 
         - The 5 music entries are updatable as music changes do change over time. 
 
-#### Professor-Specific Features
-    1. Manage Subjects
-        - Professors can add new subjects and specify class size.
-        - View Class List
-        - Remove enrolled student in a class.
-
+#### Hobbies Page
+    1. View respective Hobbies and add associated media uploads.
 
 ## Setup Instructions
 ### Prerequisites
