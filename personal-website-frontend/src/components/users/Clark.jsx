@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import clark from '../../assets/clark.png';
+import '../../App.css';
+import '../../index.css';
 
 const Clark = () => {
     return (
@@ -14,21 +16,21 @@ const Clark = () => {
                 <h1 className="explore">Explore Clark's...</h1>
                 <div className="pages music-page">
                     <Link to="/clark/music">
-                        <button className="hover:bg-blue-700 rounded-lg">
+                        <button className="hover:bg-blue-700 rounded-lg favorites">
                             Favorite Music
                         </button>
                     </Link>
                 </div>
                 <div className="pages hobbies-page">
                     <Link to="/clark/hobbies">
-                        <button className="hover:bg-blue-700 rounded-lg">
+                        <button className="hover:bg-blue-700 rounded-lg favorites">
                             Hobbies
                         </button>
                     </Link>
                 </div>
                 <div className="pages to-do-page">
                     <Link to="/clark/todos">
-                        <button className="hover:bg-blue-700 rounded-lg">
+                        <button className="hover:bg-blue-700 rounded-lg favorites">
                             To-Do List
                         </button>
                     </Link>

@@ -140,11 +140,13 @@
   margin: 0 10px;
 }
 
+/* choose your fighter text */
 .fighter {
   font-size: 35px;
   font-family: poppins;
   font-weight: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+  text-align: center;
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);*/
 }
 
 .space-x-10 {
@@ -197,6 +199,7 @@
 /* buttons on a user's page */
 .pages {
   margin: 30px 0;
+  text-align: right;
 }
 
 /* favorite music button on a user's page*/
@@ -208,6 +211,15 @@
 .explore {
   font-size: 30px;
   font-family: poppins;
+}
+
+.user-name {
+  font-family: poppins;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.favorites {
 }
 
 /*Used for dynamic gaps*/
@@ -222,4 +234,125 @@
 /*  display: flex;*/
 /*  justify-content: center;*/
 /*  align-items: center;*/
+/*}*/
+
+/* BELOW ARE USED FOR MUSIC */
+
+.music-container {
+  padding: 1rem;
+}
+
+/*.music-item {*/
+/*  border: 1px solid #e5e7eb; !* Tailwind's 'border-gray-200' *!*/
+/*  padding: 1rem;*/
+/*  border-radius: 0.5rem; !* Tailwind's 'rounded-lg' *!*/
+/*  background-color: #ffffff; !* Tailwind's 'bg-white' *!*/
+/*}*/
+
+/*.music-item strong {*/
+/*  display: block;*/
+/*  margin-bottom: 0.5rem;*/
+/*}*/
+
+.album-art {
+  width: 30%;
+  height: auto;
+  /*max-height: 50px; !* Add this to maintain a reasonable size *!*/
+  object-fit: cover; /* Ensure the image covers the container */
+  margin-bottom: 1rem; /* Add some space below the image */
+}
+
+.spotify-player {
+  margin-top: 1rem;
+}
+
+.update-button {
+  margin-top: 0.5rem;
+  background-color: #3b82f6; /* Tailwind's 'bg-blue-500' */
+  color: #ffffff; /* Tailwind's 'text-white' */
+  padding: 0.5rem 1rem; /* Tailwind's 'px-4 py-2' */
+  border-radius: 0.25rem; /* Tailwind's 'rounded' */
+  transition: background-color 0.3s;
+}
+
+.update-button:hover {
+  background-color: #2563eb; /* Tailwind's 'hover:bg-blue-700' */
+}
+
+/* Music.css */
+.music-group {
+  display: grid;
+  gap: 1rem; /* Adjust the space between the items */
+}
+
+.music-row-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1px;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.music-row-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*grid-template-rows: repeat(auto-fill, 120px);*/
+  grid-row-gap: .5em;
+  grid-column-gap: 1em;
+  justify-content: center;
+}
+
+/*.music-item {*/
+/*  border: 1px solid #ccc;*/
+/*  padding: 1rem;*/
+/*  border-radius: 0.5rem;*/
+/*  text-align: center;*/
+/*}*/
+
+
+.music-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.music-artist {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.music-album {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.album-art {
+  margin-bottom: 1rem;
+  width: 400px;
+  border-radius: 30px;
+}
+
+.spotify-player {
+  margin-bottom: 1rem;
+}
+
+.spotify-player-container {
+  width: 430px; /* Set the desired width */
+  /*height: 222px; !* Set the desired height *!*/
+}
+
+.music-label {
+  font-size: 15px;
+  text-align: center;
+}
+
+.music-item-1 {
+  display: grid
+}
+
+/*.spotify-player-container iframe {*/
+/*  width: 100%;*/
+/*  height: 100%;*/
 /*}*/

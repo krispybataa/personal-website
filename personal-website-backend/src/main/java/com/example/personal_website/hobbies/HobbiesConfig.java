@@ -36,12 +36,26 @@ public class HobbiesConfig {
 
             Hobbies crochet = new Hobbies(
                     "Crocheting",
-                    "Fun knitting knots",
-                    "https://youtu.be/aAxGTnVNJiE",
+                    "Crocheting a bunch of stuff so I don't have to buy them.",
+                    "/images/crochet.png",
                     shan
             );
 
-            hobbiesRepository.saveAll(List.of(farming, givingup, crochet));
+            Hobbies piano = new Hobbies(
+                    "Playing the piano/keyboard",
+                    "I am a fakeyboardist, the picture is only for cloutchasing purposes.",
+                    "/images/piano.png",
+                    shan
+            );
+
+            Hobbies kpop = new Hobbies(
+                    "KPOP",
+                    "I have been consumed by Korean media (125 day duolingo streak)",
+                    "/images/kpop.png",
+                    shan
+            );
+
+            hobbiesRepository.saveAll(List.of(farming, givingup, crochet, piano, kpop));
         };
     }
 }

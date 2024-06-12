@@ -63,15 +63,47 @@ public class MusicConfig {
             musicRepository.saveAll(List.of(bibbidiba,mirror, myway, chuchu, pinkvenom));
 
             //SHAN MUSIC CONFIG
-            Music magnetic = new Music(
-                    "Magnetic",
-                    "SUPER REAL ME",
-                    "ILLIT",
-                    "https://upload.wikimedia.org/wikipedia/en/9/99/Illit_-_Super_Real_Me.png",
-                    "https://open.spotify.com/track/1aKvZDoLGkNMxoRYgkckZG?si=c9109785a4ab4e12",
+            Music bridge = new Music(
+                    "Bridge Over Troubled Water",
+                    "Djesse Vol. 4",
+                    "Jacob Collier",
+                    "https://upload.wikimedia.org/wikipedia/en/5/51/Djesse_Vol_4_album_cover.jpg",
+                    "https://open.spotify.com/track/4FG5dNlurEtZ84kCTg5YLA?si=8PPein1ySaq_wUevqUx-ow",
                     shan
             );
-            musicRepository.saveAll(List.of(magnetic));
+            Music dreamer = new Music(
+                    "Dreamer",
+                    "The Name Chapter: FREEFALL",
+                    "TOMORROW X TOGETHER",
+                    "https://upload.wikimedia.org/wikipedia/en/1/15/The_Name_Chapter_-_Freefall.png",
+                    "https://open.spotify.com/track/59ScHwQ4PP0TRTJgG07PAW?si=LVQjFT4jTMO_tNJu-Vzlbg",
+                    shan
+            );
+            Music nobodyknows = new Music(
+                    "Nobody Knows",
+                    "Born to be XX",
+                    "kISS OF LIFE",
+                    "https://upload.wikimedia.org/wikipedia/en/0/0d/Born_to_be_XX_Cover.jpg",
+                    "https://open.spotify.com/track/70efTlnBNM8BvfhfPiqOBN?si=PTIlLoXQQfW6xqmK5cNLsw",
+                    shan
+            );
+            Music eraseme = new Music(
+                    "erase me",
+                    "five seconds flat",
+                    "Lizzy McAlpine",
+                    "https://upload.wikimedia.org/wikipedia/en/8/8e/The_cover_for_the_second_studio_album_by_American_singer-songwriter_Lizzy_McAlpine.jpeg",
+                    "https://open.spotify.com/track/4R2DDseYW2tsmMhvdQQ2Po?si=tBxGJj9dR8-kVxrxbpuu3Q",
+                    shan
+            );
+            Music flying = new Music(
+                    "Flying",
+                    "Flying",
+                    "Cody Fry",
+                    "https://upload.wikimedia.org/wikipedia/en/4/4a/Flying_%28Cody_Fry_album%29.jpg",
+                    "https://open.spotify.com/track/3zAjHVmMyuhBXhxUgdzGeL?si=Lxr3Y6WuRv2Fp8AR65XPMA",
+                    shan
+            );
+            musicRepository.saveAll(List.of(bridge, dreamer, nobodyknows, eraseme, flying));
         };
     }
 }

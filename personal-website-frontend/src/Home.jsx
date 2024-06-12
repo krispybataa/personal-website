@@ -5,6 +5,8 @@ import shan from './assets/sheianne.png';
 import clark from './assets/clark.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './App.css';
+import './index.css';
 
 const Home = () => {
     useEffect(() => {

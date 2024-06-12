@@ -1,6 +1,7 @@
 import React from 'react';
 import shan from '../../assets/sheianne.png';
-
+import '../../App.css';
+import '../../index.css';
 import { Link } from 'react-router-dom';
 
 const Sheianne = () => {
@@ -15,21 +16,21 @@ const Sheianne = () => {
             <h1 className="explore">Explore Sheianne's...</h1>
             <div className="pages music-page">
                 <Link to="/sheianne/music">
-                    <button className="hover:bg-blue-700 rounded-lg">
+                    <button className="hover:bg-blue-700 rounded-lg favorites">
                         Favorite Music
                     </button>
                 </Link>
             </div>
             <div className="pages hobbies-page">
                 <Link to="/sheianne/hobbies">
-                    <button className="hover:bg-blue-700 rounded-lg">
+                    <button className="hover:bg-blue-700 rounded-lg favorites">
                         Hobbies
                     </button>
                 </Link>
             </div>
             <div className="pages to-do-page">
                 <Link to="/sheianne/todos">
-                    <button className="hover:bg-blue-700 rounded-lg">
+                    <button className="hover:bg-blue-700 rounded-lg favorites">
                         To-Do List
                     </button>
                 </Link>

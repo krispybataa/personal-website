@@ -60,23 +60,130 @@ const Music = ({ userId }) => {
             .catch(error => console.error('Error updating music:', error));
     };
 
+
+    // Divide musicList into two groups: 3 items in the first row and 2 items in the second row
+    // const firstRow = musicList.slice(0, 3);
+    // const secondRow = musicList.slice(3, 5);
+    const musicItemOne = musicList.slice(0, 1);
+    const musicItemTwo = musicList.slice(1, 2);
+    const musicItemThree = musicList.slice(2, 3);
+    const musicItemFour = musicList.slice(3, 4);
+    const musicItemFive = musicList.slice(4, 5);
+
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl mb-4">Favorite Music for {userName}</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {musicList.map(music => (
-                    <div key={music.id} className="border p-4 rounded-lg">
-                        <strong>{music.title}</strong> by {music.artist} - {music.album}
-                        <div>
-                            <img src={music.aaUrl} alt={`${music.title} album art`} className="w-full h-auto"/>
+            <h1 className="text-2xl mb-4 welcome section">This is {userName}'s favorite music!</h1>
+
+            {/*/!* Go-To buttons *!/*/}
+            {/*<div className="go-to-buttons">*/}
+            {/*    <Link to={`/${userId}/hobbies`}>*/}
+            {/*        <button className="go-to-hobbies hover:bg-blue-700 rounded-lg favorites">*/}
+            {/*            Hobbies*/}
+            {/*        </button>*/}
+            {/*    </Link>*/}
+            {/*    <Link to={`/${userId}/todos`}>*/}
+            {/*        <button className="go-to-todos hover:bg-blue-700 rounded-lg favorites">*/}
+            {/*            To-Do*/}
+            {/*        </button>*/}
+            {/*    </Link>*/}
+            {/*</div>*/}
+
+            <div className="music-group music-row-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
+                {musicItemOne.map(music => (
+                    <div key={music.id} className="music-item  music-item-1 border p-4 rounded-lg">
+                        <h1 className="music-label"> {music.title} by {music.artist} - {music.album} </h1>
+                        <div className="album-art">
+                            <img src={music.aaUrl} alt={`${music.title} album art`}
+                                 className="album-art w-full h-auto"/>
                         </div>
-                        <SpotifyPlayer embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`} />
-                        <button
-                            onClick={() => handleUpdate(music)}
-                            className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
-                        >
-                            Update
-                        </button>
+                        <div className="spotify-player-container">
+                            <SpotifyPlayer className="spotify-player"
+                                           embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
+                        </div>
+                        {/*<button*/}
+                        {/*    onClick={() => handleUpdate(music)}*/}
+                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
+                        {/*>*/}
+                        {/*    Update*/}
+                        {/*</button>*/}
+                    </div>
+                ))}
+                {musicItemTwo.map(music => (
+                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
+                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                        <div className="album-art">
+                            <img src={music.aaUrl} alt={`${music.title} album art`}
+                                 className="album-art w-full h-auto"/>
+                        </div>
+                        <div className="spotify-player-container">
+                            <SpotifyPlayer className="spotify-player"
+                                           embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
+                        </div>
+                        {/*<button*/}
+                        {/*    onClick={() => handleUpdate(music)}*/}
+                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
+                        {/*>*/}
+                        {/*    Update*/}
+                        {/*</button>*/}
+                    </div>
+                ))}
+                {musicItemThree.map(music => (
+                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
+                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                        <div className="album-art">
+                            <img src={music.aaUrl} alt={`${music.title} album art`}
+                                 className="album-art w-full h-auto"/>
+                        </div>
+                        <div className="spotify-player-container">
+                            <SpotifyPlayer className="spotify-player"
+                                           embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
+                        </div>
+                        {/*<button*/}
+                        {/*    onClick={() => handleUpdate(music)}*/}
+                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
+                        {/*>*/}
+                        {/*    Update*/}
+                        {/*</button>*/}
+                    </div>
+                ))}
+            </div>
+            <div className="music-group music-row-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+                {musicItemFour.map(music => (
+                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
+                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                        <div className="album-art">
+                            <img src={music.aaUrl} alt={`${music.title} album art`}
+                                 className="album-art w-full h-auto"/>
+                        </div>
+                        <div className="spotify-player-container">
+                            <SpotifyPlayer className="spotify-player"
+                                           embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
+                        </div>
+                        {/*<button*/}
+                        {/*    onClick={() => handleUpdate(music)}*/}
+                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
+                        {/*>*/}
+                        {/*    Update*/}
+                        {/*</button>*/}
+                    </div>
+                ))}
+                {musicItemFive.map(music => (
+                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
+                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                        <div className="album-art">
+                            <img src={music.aaUrl} alt={`${music.title} album art`}
+                                 className="album-art w-full h-auto"/>
+                        </div>
+                        <div className="spotify-player-container">
+                            <SpotifyPlayer className="spotify-player"
+                                           embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
+                        </div>
+                        {/*<button*/}
+                        {/*    onClick={() => handleUpdate(music)}*/}
+                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
+                        {/*>*/}
+                        {/*    Update*/}
+                        {/*</button>*/}
                     </div>
                 ))}
             </div>
