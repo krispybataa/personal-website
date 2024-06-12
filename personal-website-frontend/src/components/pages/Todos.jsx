@@ -67,8 +67,8 @@ const Todos = ({ userId }) => {
     const uniqueCategories = [...new Set(todos.map(todo => todo.category))];
 
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-2xl mb-4 text-white">To-do List for {userName}</h1>
+        <div className="container to-do-container mx-auto p-4">
+            <h1 className="to-do-header text-2xl mb-4 text-white">To-do List for {userName}</h1>
             {error && <p className="text-red-500">{error}</p>}
             <div className="mb-4 flex space-x-2">
                 <button onClick={handleDeleteSelected} className="bg-red-500 text-white px-4 py-2 rounded">
@@ -89,17 +89,17 @@ const Todos = ({ userId }) => {
                 <table className="min-w-full bg-white">
                     <thead>
                     <tr>
-                        <th className="py-2">Select</th>
-                        <th className="py-2">Label</th>
-                        <th className="py-2">Task</th>
-                        <th className="py-2">Description</th>
-                        <th className="py-2">Status</th>
+                        <th className="py-2 todo-check">Select</th>
+                        <th className="py-2 todo-label">Label</th>
+                        <th className="py-2 todo-task">Task</th>
+                        <th className="py-2 todo-description">Description</th>
+                        <th className="py-2 todo-check">Status</th>
                     </tr>
                     </thead>
                     <tbody>
                     {filteredTodos.map(todo => (
                         <tr key={todo.id}>
-                            <td className="border px-4 py-2">
+                            <td className="border px-4 py-2 center-content select-todo">
                                 <input
                                     type="checkbox"
                                     checked={selectedTodos.includes(todo.id)}
@@ -112,10 +112,10 @@ const Todos = ({ userId }) => {
                                     }}
                                 />
                             </td>
-                            <td className="border px-4 py-2">{todo.category}</td>
-                            <td className="border px-4 py-2">{todo.task}</td>
-                            <td className="border px-4 py-2">{todo.description}</td>
-                            <td className="border px-4 py-2">
+                            <td className="border px-4 py-2 label-todo">{todo.category}</td>
+                            <td className="border px-4 py-2 task-todo">{todo.task}</td>
+                            <td className="border px-4 py-2 description-todo">{todo.description}</td>
+                            <td className="border px-4 py-2 center-content">
                                 <input
                                     type="checkbox"
                                     checked={todo.completed}
@@ -127,7 +127,7 @@ const Todos = ({ userId }) => {
                     </tbody>
                 </table>
             </div>
-            <div className="mt-4 bg-gray-800 p-4 rounded-lg">
+            <div className="mt-4 bg-gray-800 p-4 rounded-lg add-todo">
                 <h2 className="text-lg mb-2 text-white">Add a new Todo</h2>
                 <div className="mb-2">
                     <label className="block text-sm font-bold mb-1 text-white">Category</label>

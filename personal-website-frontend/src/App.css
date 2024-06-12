@@ -352,6 +352,60 @@
   display: grid
 }
 
+.min-w-full {
+  /*min-height: 100bg;*/
+
+}
+
+/*.py-2 {*/
+/*  width: 175px;*/
+/*}*/
+
+.to-do-header {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.mb-4 {
+  margin: 30px;
+}
+
+.overflow-x-auto {
+  border-width: 0.5px;
+  justify-content: left;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px;
+  padding: 30px;
+  border-color: #FFFFFF;
+  overflow-x: auto;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-check {
+  width: 75px;
+}
+
+.todo-label {
+  width: 125px;
+}
+
+.todo-task {
+  width: 175px;
+}
+
+.add-todo {
+  margin-left: 30px;
+}
+
+/* todo select */
+
 /*.spotify-player-container iframe {*/
 /*  width: 100%;*/
 /*  height: 100%;*/
