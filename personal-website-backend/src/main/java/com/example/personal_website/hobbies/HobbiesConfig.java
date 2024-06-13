@@ -20,24 +20,44 @@ public class HobbiesConfig {
             Users clark = usersRepository.findUsersByUsername("krispybataa").orElseThrow(() -> new IllegalStateException("User not found"));
             Users shan = usersRepository.findUsersByUsername("deenonuggets").orElseThrow(() -> new IllegalStateException("User not found"));
 
-            Hobbies farming = new Hobbies(
-                    "Farming Levels",
-                    "Levelling up Subclasses",
-                    "https://youtu.be/YwILuJ5lVwM",
+            Hobbies ff14 = new Hobbies(
+                    "Final Fantasy XIV",
+                    "Did you know that the critically acclaimed MMORPG Final Fantasy XIV has a free trial, " +
+                            "and includes the entirety of A Realm Reborn AND the award-winning Heavensward " +
+                            "expansion up to level 60 with no restrictions on playtime?" +
+                            " Sign up, " +
+                            "and enjoy Eorzea today!",
+                    "https://secure.square-enix.com/account/app/svc/ffxivregister?lng=en-gb",
                     clark
             );
 
-            Hobbies givingup = new Hobbies(
-                    "Not Giving you Up",
-                    "Not letting you go",
-                    "https://youtu.be/dQw4w9WgXcQ",
+            Hobbies youtoob = new Hobbies(
+                    "YouTube",
+                    "When I feel a creative rush I may post on my channel.",
+                    "https://www.youtube.com/@powerbabyy",
                     clark
             );
+
+            Hobbies gitfarming = new Hobbies(
+                    "Project Farming",
+                    "I take the opportunity to put any of my bulkier projects on my GitHub account.",
+                    "https://github.com/krispybataa",
+                    clark
+            );
+
+            Hobbies yttest = new Hobbies(
+                    "YT Test Render",
+                    "This is to test the YT capabilities",
+                    "https://youtu.be/I98FB8pcNVA",
+                    clark
+            );
+
+            //SHAN HOBBIES
 
             Hobbies crochet = new Hobbies(
                     "Crocheting",
                     "Crocheting a bunch of stuff so I don't have to buy them.",
-                    "/images/crochet.png",
+                    "https://th.bing.com/th/id/OIP.M1ELxfNW5Zju-lzLh4GxuAHaEK?rs=1&pid=ImgDetMain",
                     shan
             );
 
@@ -55,7 +75,7 @@ public class HobbiesConfig {
                     shan
             );
 
-            hobbiesRepository.saveAll(List.of(farming, givingup, crochet, piano, kpop));
+            hobbiesRepository.saveAll(List.of(ff14, youtoob, gitfarming, crochet, piano, kpop, yttest));
         };
     }
 }

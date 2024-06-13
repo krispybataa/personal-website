@@ -79,7 +79,7 @@ public class MusicService {
         }
 
         if (spUrl != null && !spUrl.isEmpty()) {
-            music.setAaUrl(spUrl);
+            music.setSpUrl(spUrl);
         }
         musicRepository.save(music);
     }

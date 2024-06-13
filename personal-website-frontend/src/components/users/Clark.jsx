@@ -6,11 +6,11 @@ import '../../index.css';
 
 const Clark = () => {
     return (
-        <div className="container gen-container">
-            <div className="container user">
+    <div className="container gen-container">
+        <div className="container user">
                 <img src={clark} alt="Clark" className="w-40 h-40 rounded-full mb-4 clark-pfp"/><br></br>
                 <h3 className="user-name">Augustus Clark Raphael P. Rodriguez</h3>
-                <p className="description shan-desc">This is Clark's personal statement.</p>
+                <p className="description shan-desc">You fool! I knew you'd make the right choice.</p>
             </div>
             <div className="container user-details">
                 <h1 className="explore">Explore Clark's...</h1>

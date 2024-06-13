@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SpotifyPlayer from '../SpotifyPlayer';
 import MusicModal from '../MusicModal.jsx';
 
+
 const Music = ({ userId }) => {
     const [musicList, setMusicList] = useState([]);
     const [userName, setUserName] = useState('');
