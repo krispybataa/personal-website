@@ -1,0 +1,30 @@
+/* Navigation bar on top */
+.navbar-center {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+    font-weight: bold;
+    font-family: poppins;
+    background-color: black;
+    z-index: 1;
+}
+
+/* Assigned logo size */
+.logo {
+    height: 20px;
+}
+
+/* Separator for Sheianne | Clark */
+.separator {
+    margin: 0 10px;
+}

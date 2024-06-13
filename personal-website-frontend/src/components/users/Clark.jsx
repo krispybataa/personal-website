@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import clark from '../../assets/clark.png';
-import '../../App.css';
 import '../../index.css';
+import './Users.css';
 
 const Clark = () => {
     return (

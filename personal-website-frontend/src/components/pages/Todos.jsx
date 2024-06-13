@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import shan from '../../assets/sheianne.png';
 import clark from '../../assets/clark.png';
+import './Todos.css';
 
 
 const Todos = ({ userId }) => {
@@ -92,7 +93,7 @@ const Todos = ({ userId }) => {
                         <select
                             value={filterCategory}
                             onChange={e => setFilterCategory(e.target.value)}
-                            className="border p-2 rounded"
+                            className="border rounded"
                         >
                             <option value="all">All Labels</option>
                             {uniqueCategories.map(category => (
@@ -143,9 +144,10 @@ const Todos = ({ userId }) => {
                         </table>
                     </div>
                     <div className="mt-4 bg-gray-800 p-4 rounded-lg add-todo">
-                        <h2 className="text-lg mb-2 text-white">Add a new Todo</h2>
+                        <h2 className="text-lg text-white add"><b>ADD A NEW TODO</b></h2>
                         <div className="mb-2">
                             <label className="block text-sm font-bold mb-1 text-white">Label</label>
+                            <p className="sep"></p>
                             <input
                                 type="text"
                                 value={newTodo.category}
@@ -155,6 +157,7 @@ const Todos = ({ userId }) => {
                         </div>
                         <div className="mb-2">
                             <label className="block text-sm font-bold mb-1 text-white">Task</label>
+                            <p className="sep"></p>
                             <input
                                 type="text"
                                 value={newTodo.task}
@@ -164,6 +167,7 @@ const Todos = ({ userId }) => {
                         </div>
                         <div className="mb-2">
                             <label className="block text-sm font-bold mb-1 text-white">Description</label>
+                            <p className="sep"></p>
                             <input
                                 type="text"
                                 value={newTodo.description}
@@ -171,7 +175,7 @@ const Todos = ({ userId }) => {
                                 className="border p-2 rounded w-full"
                             />
                         </div>
-                        <button onClick={handleAddTodo} className="bg-blue-500 text-white px-4 py-2 rounded">
+                        <button onClick={handleAddTodo} className="bg-blue-500 text-white px-4 py-2 rounded add-button">
                             Add Todo
                         </button>
                     </div>

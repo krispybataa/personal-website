@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SpotifyPlayer from '../SpotifyPlayer';
 import MusicModal from '../MusicModal.jsx';
-
+import './Music.css';
 
 const Music = ({ userId }) => {
     const [musicList, setMusicList] = useState([]);
@@ -125,12 +125,6 @@ const Music = ({ userId }) => {
                             <SpotifyPlayer className="spotify-player"
                                            embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
                         </div>
-                        {/*<button*/}
-                        {/*    onClick={() => handleUpdate(music)}*/}
-                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
-                        {/*>*/}
-                        {/*    Update*/}
-                        {/*</button>*/}
                     </div>
                 ))}
                 {musicItemThree.map(music => (
@@ -190,12 +184,6 @@ const Music = ({ userId }) => {
                             <SpotifyPlayer className="spotify-player"
                                            embedLink={`https://open.spotify.com/embed/track/${music.spUrl.split('track/')[1].split('?')[0]}`}/>
                         </div>
-                        {/*<button*/}
-                        {/*    onClick={() => handleUpdate(music)}*/}
-                        {/*    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"*/}
-                        {/*>*/}
-                        {/*    Update*/}
-                        {/*</button>*/}
                     </div>
                 ))}
             </div>

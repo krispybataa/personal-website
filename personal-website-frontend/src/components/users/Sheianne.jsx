@@ -1,7 +1,7 @@
 import React from 'react';
 import shan from '../../assets/sheianne.png';
-import '../../App.css';
 import '../../index.css';
+import './Users.css';
 import { Link } from 'react-router-dom';
 
 const Sheianne = () => {
