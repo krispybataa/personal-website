@@ -15,14 +15,10 @@ The website was designed to be simple, to the point, and most of all updatable s
 #### Dynamic To-Do List
     1. Unique To-Do List per character
     2. CRUD Operations on a To-Do list page
-    3. Filters by Label 
-
-#### Dynamic Music Page 
+    3. Filters by Label
+#### Music Page 
     1. Spotify Support
-        - Viewers can play the listed top 5 tracks 
-    2. Updatable music 
-        - The 5 music entries are updatable as music changes do change over time. 
-
+        - Viewers can play the listed top 5 tracks
 #### Hobbies Page
     1. View respective Hobbies and add associated media uploads.
 
@@ -37,7 +33,7 @@ The website was designed to be simple, to the point, and most of all updatable s
 - Visual Studio Code: https://code.visualstudio.com/download
 - PostgreSQL: https://www.postgresql.org/download/
 
-## Running The Program
+## Running The Website
 ##### 1. Clone Repository
     git clone https://github.com/krispybataa/machine-problem.git
 
@@ -49,12 +45,16 @@ The website was designed to be simple, to the point, and most of all updatable s
     npm install
 
 ##### 4. Set Up Environmental Variables
-    Note: Make sure to correctly fill up Database Credentials
+    Note: Make sure to correctly fill up Database Credentials found in 
+    src/main/resources/application.properties
 
-##### 5. Run Database Migrations
-    Run backend server
+    The following line/s:
+    spring.datasource.username=
+    spring.datasource.password=
 
-##### 6. Serve The Frontend
+    Should be adjusted accordingly
+
+##### 5. Serve The Frontend
     npm run dev
 
 
@@ -70,3 +70,7 @@ The website was designed to be simple, to the point, and most of all updatable s
 ## Contact Us
 - RODRIGUEZ, Augustus Clark Raphael P.  | aprodriguez7@up.edu.ph
 - SEBLANTE, Sheianne Deeno              | seseblante@up.edu.ph
+
+<div align="center">
+    <img src="https://media.tenor.com/DZd73nCn7bgAAAAe/superman-meme.png">
+</div>
