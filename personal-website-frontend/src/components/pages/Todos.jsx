@@ -4,13 +4,13 @@ import shan from '../../assets/sheianne.png';
 import clark from '../../assets/clark.png';
 import './Todos.css';
 
-
 const Todos = ({ userId }) => {
     const [todos, setTodos] = useState([]);
     const [userName, setUserName] = useState('');
     const [userImage, setUserImage] = useState('');
     const [newTodo, setNewTodo] = useState({ category: '', task: '', description: '' });
     const [filterCategory, setFilterCategory] = useState('all');
+    const [filterStatus, setFilterStatus] = useState('all');
     const [selectedTodos, setSelectedTodos] = useState([]);
     const [error, setError] = useState('');
 
@@ -73,7 +73,9 @@ const Todos = ({ userId }) => {
     };
 
     const filteredTodos = todos.filter(todo => {
-        if (filterCategory !== 'all') return todo.category === filterCategory;
+        if (filterCategory !== 'all' && todo.category !== filterCategory) return false;
+        if (filterStatus === 'completed' && !todo.completed) return false;
+        if (filterStatus === 'notCompleted' && todo.completed) return false;
         return true;
     });
 
@@ -99,6 +101,15 @@ const Todos = ({ userId }) => {
                             {uniqueCategories.map(category => (
                                 <option key={category} value={category}>{category}</option>
                             ))}
+                        </select>
+                        <select
+                            value={filterStatus}
+                            onChange={e => setFilterStatus(e.target.value)}
+                            className="border rounded"
+                        >
+                            <option value="all">All Status</option>
+                            <option value="completed">Completed</option>
+                            <option value="notCompleted">Not Completed</option>
                         </select>
                     </div>
                     <div className="overflow-x-auto">

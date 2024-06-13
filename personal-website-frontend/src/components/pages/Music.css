@@ -20,7 +20,7 @@
     width: 100%;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex: 3;
     border-width: 1px;
@@ -28,7 +28,7 @@
 
 .music-item-1, .music-item-2, .music-item-3 {
     display: flex;
-    width: 33%;
+    width: 30%;
     flex-direction: column;
     /*border-width: 1px;*/
     justify-content: center;
@@ -48,7 +48,7 @@
 
 .music-item-4, .music-item-5 {
     display: flex;
-    width: 50%;
+    width: 40%;
     flex-direction: column;
     /*border-width: 1px;*/
     justify-content: center;

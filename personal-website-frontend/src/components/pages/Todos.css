@@ -144,3 +144,9 @@
     justify-content: right;
     width: 100%;
 }
+
+.to-do-header {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 30px;
+}

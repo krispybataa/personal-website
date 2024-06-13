@@ -74,7 +74,7 @@ const Music = ({ userId }) => {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl mb-4 welcome section">This is {userName}'s favorite music!</h1>
+            <h1 className="text-2xl mb-4 welcome section">This is some of {userName}'s favorite music!</h1>
 
             {/*/!* Go-To buttons *!/*/}
             {/*<div className="go-to-buttons">*/}

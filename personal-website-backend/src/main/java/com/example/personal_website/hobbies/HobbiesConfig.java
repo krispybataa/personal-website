@@ -45,10 +45,10 @@ public class HobbiesConfig {
                     clark
             );
 
-            Hobbies yttest = new Hobbies(
-                    "YT Test Render",
-                    "This is to test the YT capabilities",
-                    "https://youtu.be/I98FB8pcNVA",
+            Hobbies fivhuncigs = new Hobbies(
+                    "500 Cigarettes.",
+                    "The aroma is most pleasing. (YT Render Test).",
+                    "https://youtu.be/8liPBsUtND4",
                     clark
             );
 
@@ -75,7 +75,7 @@ public class HobbiesConfig {
                     shan
             );
 
-            hobbiesRepository.saveAll(List.of(ff14, youtoob, gitfarming, crochet, piano, kpop, yttest));
+            hobbiesRepository.saveAll(List.of(ff14, youtoob, gitfarming, crochet, piano, kpop, fivhuncigs));
         };
     }
 }

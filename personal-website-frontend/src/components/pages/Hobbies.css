@@ -26,6 +26,7 @@
     margin-bottom: 1rem;
     text-align: left;
     flex: 1 1 calc(33.333% - 2rem);
+    max-width: 400px;  /* Adjust this value as needed */
     box-sizing: border-box;
 }
 
