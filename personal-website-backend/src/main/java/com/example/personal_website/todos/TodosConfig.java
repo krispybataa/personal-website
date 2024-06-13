@@ -19,19 +19,39 @@ public class TodosConfig {
         return args -> {
             Users clark = usersRepository.findUsersByUsername("krispybataa").orElseThrow(() -> new IllegalStateException("User not found"));
             Users shan = usersRepository.findUsersByUsername("deenonuggets").orElseThrow(() -> new IllegalStateException("User not found"));
+            //CLARK TODOLIST CONFIG
             Todos task_clark = new Todos(
                     "#academics",
                     "finish spring",
                     "self explanatory",
                     clark
             );
+            Todos tc2 = new Todos(
+                    "#lifestyle",
+                    "take measurements",
+                    "take measurements of the things in life",
+                    clark
+            );
+            Todos tc3 = new Todos(
+                    "#programming",
+                    "publish all projects to git",
+                    "know thy self",
+                    clark
+            );
+            //SHAN TODOS
             Todos task_shan = new Todos(
                     "#academics",
                     "finish react",
                     "self explanatory",
                     shan
             );
-            todosRepository.saveAll(List.of(task_clark, task_shan));
+            Todos ts2 = new Todos(
+                    "#lifestyle",
+                    "finish crochet project",
+                    "cute",
+                    shan
+            );
+            todosRepository.saveAll(List.of(task_clark, tc2, tc3, task_shan, ts2));
         };
     }
 }

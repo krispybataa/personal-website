@@ -30,7 +30,7 @@ public class HobbiesService {
         hobbiesRepository.save(hobbies);
     }
 
-    public void updateHobbies(Long hobbiesId,
+    public Hobbies updateHobbies(Long hobbiesId,
                               String name,
                               String description,
                               String media) {
@@ -54,7 +54,7 @@ public class HobbiesService {
             hobbies.setMedia(media);
         }
 
-        hobbiesRepository.save(hobbies);
+        return hobbiesRepository.save(hobbies);
     }
 
     public void deleteHobbies(Long hobbiesId) {

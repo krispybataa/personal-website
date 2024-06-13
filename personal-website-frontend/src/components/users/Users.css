@@ -1,0 +1,60 @@
+
+/* container for a user's page */
+.gen-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Center the container content horizontally */
+    align-items: center; /* Center the container content vertically */
+    gap: 200px;
+    max-height: 100vh;
+    margin-top: 1rem;
+}
+
+/* pfp per user */
+.shan-pfp, .clark-pfp {
+    width: 300px;
+}
+
+.user-details {
+    border-width: 0.5px;
+}
+
+.favorites {
+    border-width: 0.5px;
+}
+
+/* buttons on a user's page */
+.pages {
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* favorite music button on a user's page*/
+.music-page {
+    /*margin-top: 50px;*/
+}
+
+.to-do-page {
+    /*margin-bottom: 0px;*/
+}
+
+/* Explore users title */
+.explore {
+    font-size: 30px;
+    font-family: poppins;
+    border-width: 0.5px;
+    padding: 35px
+}
+
+.user-name {
+    font-family: poppins;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 20px;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 13px;
+    text-align: center;
+}

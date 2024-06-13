@@ -38,8 +38,8 @@ public class HobbiesController {
             @RequestParam(required = false) String media
     )
     {
-        hobbiesService.updateHobbies(hobbiesId, name, description, media);
-        return ResponseEntity.ok().build();
+        Hobbies updatedEntity = hobbiesService.updateHobbies(hobbiesId, name, description, media);
+        return ResponseEntity.ok(updatedEntity);
     }
     @DeleteMapping(path = "{hobbiesId}")
     public ResponseEntity<?> deleteHobby(@PathVariable("hobbiesId") Long hobbiesId){
