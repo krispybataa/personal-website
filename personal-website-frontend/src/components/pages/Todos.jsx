@@ -145,7 +145,7 @@ const Todos = ({ userId }) => {
                     <div className="mt-4 bg-gray-800 p-4 rounded-lg add-todo">
                         <h2 className="text-lg mb-2 text-white">Add a new Todo</h2>
                         <div className="mb-2">
-                            <label className="block text-sm font-bold mb-1 text-white">Category</label>
+                            <label className="block text-sm font-bold mb-1 text-white">Label</label>
                             <input
                                 type="text"
                                 value={newTodo.category}

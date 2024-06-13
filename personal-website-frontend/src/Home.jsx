@@ -20,7 +20,7 @@ const Home = () => {
                 <h1 className="welcome">Welcome to 2Broculosis</h1>
             </div>
             <div className="bottom-page" data-aos="zoom-in">
-                <br></br><h1 className="fighter" data-aos="fade-left">CHOOSE YOUR FIGHTER</h1>
+                <br></br><h1 className="fighter" data-aos="fade-left">CHOOSE YOUR 'BRO'</h1>
                 <div className="characters flex reveal space-x-10" data-aos="fade">
                     <Link to="/clark">
                         <div className="flex flex-col items-center cursor-pointer">
