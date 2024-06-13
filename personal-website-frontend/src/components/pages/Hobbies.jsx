@@ -76,14 +76,14 @@ const Hobbies = ({ userId }) => {
             </div>
             <div className="todo-buttons">
                 <div className="pages">
-                    <Link to={`/${userId}/music`}>
+                    <Link to={`/${userName}/music`}>
                         <button className="hover:bg-blue-700 rounded-lg favorites">
                             Favorite Music
                         </button>
                     </Link>
                 </div>
                 <div className="pages">
-                    <Link to={`/${userId}/todos`}>
+                    <Link to={`/${userName}/todos`}>
                         <button className="hover:bg-blue-700 rounded-lg favorites">
                             To-Do
                         </button>
