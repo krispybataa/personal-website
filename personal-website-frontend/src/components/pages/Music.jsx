@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SpotifyPlayer from '../SpotifyPlayer';
 import MusicModal from '../MusicModal.jsx';
 
@@ -91,10 +92,12 @@ const Music = ({ userId }) => {
             <div className="music-group music-row-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                 {musicItemOne.map(music => (
                     <div key={music.id} className="music-item  music-item-1 border p-4 rounded-lg">
-                        <h1 className="music-label"> {music.title} by {music.artist} - {music.album} </h1>
-                        <div className="album-art">
-                            <img src={music.aaUrl} alt={`${music.title} album art`}
-                                 className="album-art w-full h-auto"/>
+                        <div className="music-item-ns1">
+                            <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                            <div className="album-art">
+                                <img src={music.aaUrl} alt={`${music.title} album art`}
+                                     className="album-art w-full h-auto"/>
+                            </div>
                         </div>
                         <div className="spotify-player-container">
                             <SpotifyPlayer className="spotify-player"
@@ -109,11 +112,13 @@ const Music = ({ userId }) => {
                     </div>
                 ))}
                 {musicItemTwo.map(music => (
-                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
-                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
-                        <div className="album-art">
-                            <img src={music.aaUrl} alt={`${music.title} album art`}
-                                 className="album-art w-full h-auto"/>
+                    <div key={music.id} className="music-item music-item-2 border p-4 rounded-lg">
+                        <div className="music-item-ns1">
+                            <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                            <div className="album-art">
+                                <img src={music.aaUrl} alt={`${music.title} album art`}
+                                     className="album-art w-full h-auto"/>
+                            </div>
                         </div>
                         <div className="spotify-player-container">
                             <SpotifyPlayer className="spotify-player"
@@ -128,11 +133,13 @@ const Music = ({ userId }) => {
                     </div>
                 ))}
                 {musicItemThree.map(music => (
-                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
-                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
-                        <div className="album-art">
-                            <img src={music.aaUrl} alt={`${music.title} album art`}
-                                 className="album-art w-full h-auto"/>
+                    <div key={music.id} className="music-item music-item-3 border p-4 rounded-lg">
+                        <div className="music-item-ns1">
+                            <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                            <div className="album-art">
+                                <img src={music.aaUrl} alt={`${music.title} album art`}
+                                     className="album-art w-full h-auto"/>
+                            </div>
                         </div>
                         <div className="spotify-player-container">
                             <SpotifyPlayer className="spotify-player"
@@ -149,11 +156,13 @@ const Music = ({ userId }) => {
             </div>
             <div className="music-group music-row-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                 {musicItemFour.map(music => (
-                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
-                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
-                        <div className="album-art">
-                            <img src={music.aaUrl} alt={`${music.title} album art`}
-                                 className="album-art w-full h-auto"/>
+                    <div key={music.id} className="music-item music-item-4 border p-4 rounded-lg">
+                        <div className="music-item-ns2">
+                            <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                            <div className="album-art">
+                                <img src={music.aaUrl} alt={`${music.title} album art`}
+                                     className="album-art w-full h-auto"/>
+                            </div>
                         </div>
                         <div className="spotify-player-container">
                             <SpotifyPlayer className="spotify-player"
@@ -168,11 +177,13 @@ const Music = ({ userId }) => {
                     </div>
                 ))}
                 {musicItemFive.map(music => (
-                    <div key={music.id} className="music-item music-item-1 border p-4 rounded-lg">
-                        <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
-                        <div className="album-art">
-                            <img src={music.aaUrl} alt={`${music.title} album art`}
-                                 className="album-art w-full h-auto"/>
+                    <div key={music.id} className="music-item music-item-5 border p-4 rounded-lg">
+                        <div className="music-item-ns2">
+                            <h1 className="music-label">{music.title} by {music.artist} - {music.album}</h1>
+                            <div className="album-art">
+                                <img src={music.aaUrl} alt={`${music.title} album art`}
+                                     className="album-art w-full h-auto"/>
+                            </div>
                         </div>
                         <div className="spotify-player-container">
                             <SpotifyPlayer className="spotify-player"
@@ -194,6 +205,22 @@ const Music = ({ userId }) => {
                 formData={formData}
                 setFormData={setFormData}
             />
+            <div className="todo-buttons">
+                <div className="pages">
+                    <Link to={`/${userName}/hobbies`} className="">
+                    <button className="">
+                            Hobbies
+                        </button>
+                    </Link>
+                </div>
+                <div className="pages">
+                    <Link to={`/${userName}/todos`} className="">
+                        <button>
+                            To-Do
+                        </button>
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };

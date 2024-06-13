@@ -11,7 +11,7 @@ import './index.css';
 const Home = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1000
+            duration: 500
         })
     }, []);
     return (
@@ -21,7 +21,7 @@ const Home = () => {
             </div>
             <div className="bottom-page" data-aos="zoom-in">
                 <br></br><h1 className="fighter" data-aos="fade-left">CHOOSE YOUR FIGHTER</h1>
-                <div className="flex reveal space-x-10" data-aos="fade">
+                <div className="characters flex reveal space-x-10" data-aos="fade">
                     <Link to="/clark">
                         <div className="flex flex-col items-center cursor-pointer">
                             {/*REPLACE WITH PROPER ASSETS*/}
